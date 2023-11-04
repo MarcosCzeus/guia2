@@ -97,7 +97,7 @@ public class LoginServlet extends HttpServlet {
     private DataSource getDataSource() {
         try {
             InitialContext context = new InitialContext();
-            return (DataSource) context.lookup("java:comp/env/jdbc/base_gump_shrimp");
+            return (DataSource) context.lookup("jdbc:mysql://localhost:3306/base_de_datos");
         } catch (NamingException e) {
             e.printStackTrace();
             return null;
